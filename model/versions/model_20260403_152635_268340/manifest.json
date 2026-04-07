@@ -1,0 +1,52 @@
+{
+  "version_id": "model_20260403_152635_268340",
+  "trained_at": "2026-04-03T15:26:35Z",
+  "triggered_by": "test_script",
+  "model_type": "RandomForestClassifier",
+  "dataset_path": "E:\\P\\CyberShield-AI\\data\\final_dataset.csv",
+  "sample_count": 20002,
+  "feature_count": 11,
+  "label_distribution": {
+    "1": 18971,
+    "0": 1031
+  },
+  "evaluation": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 210.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3791.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4001.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4001.0
+    }
+  },
+  "source_summary": {
+    "base_samples": 20000,
+    "feedback_samples": 2,
+    "combined_samples": 20002,
+    "retraining_dataset_path": "E:\\P\\CyberShield-AI\\data\\retraining_dataset.csv"
+  },
+  "artifacts": {
+    "model": "E:\\P\\CyberShield-AI\\model\\versions\\model_20260403_152635_268340\\cybershield_model.pkl",
+    "encoders": "E:\\P\\CyberShield-AI\\model\\versions\\model_20260403_152635_268340\\encoders.pkl",
+    "features": "E:\\P\\CyberShield-AI\\model\\versions\\model_20260403_152635_268340\\features.pkl",
+    "metadata": "E:\\P\\CyberShield-AI\\model\\versions\\model_20260403_152635_268340\\feature_metadata.json"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "ips": {
+    "123.45.67.89": {
+      "value": "123.45.67.89",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T14:17:01Z"
+    },
+    "76.105.5.154": {
+      "value": "76.105.5.154",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T15:02:28Z"
+    },
+    "76.107.184.116": {
+      "value": "76.107.184.116",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T15:05:45Z"
+    },
+    "47.179.21.34": {
+      "value": "47.179.21.34",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T16:19:54Z"
+    },
+    "97.205.250.44": {
+      "value": "97.205.250.44",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "Appi"
+      },
+      "listed_at": "2026-04-05T05:20:01Z"
+    },
+    "Simulate Network Traffic": {
+      "value": "Simulate Network Traffic",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-05T13:26:30Z"
+    },
+    "96.18.190.164": {
+      "value": "96.18.190.164",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-05T13:37:40Z"
+    }
+  },
+  "domains": {},
+  "hashes": {},
+  "history": [
+    {
+      "type": "ip",
+      "value": "123.45.67.89",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T14:17:01Z"
+    },
+    {
+      "type": "ip",
+      "value": "76.105.5.154",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T15:02:28Z"
+    },
+    {
+      "type": "ip",
+      "value": "76.107.184.116",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T15:05:45Z"
+    },
+    {
+      "type": "ip",
+      "value": "47.179.21.34",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-02T16:19:54Z"
+    },
+    {
+      "type": "ip",
+      "value": "97.205.250.44",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "Appi"
+      },
+      "listed_at": "2026-04-05T05:20:01Z"
+    },
+    {
+      "type": "ip",
+      "value": "Simulate Network Traffic",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-05T13:26:30Z"
+    },
+    {
+      "type": "ip",
+      "value": "96.18.190.164",
+      "source": "dashboard_manual",
+      "reason": "Analyst-confirmed malicious indicator",
+      "metadata": {
+        "created_by": "admin"
+      },
+      "listed_at": "2026-04-05T13:37:40Z"
+    }
+  ],
+  "updated_at": "2026-04-05T13:37:40Z"
+}

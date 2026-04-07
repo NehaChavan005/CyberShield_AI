@@ -1,0 +1,137 @@
+{
+  "feedback": [
+    {
+      "feedback_id": "fb-20260403152351636749",
+      "recorded_at": "2026-04-03T15:23:51Z",
+      "feedback_source": "test_script",
+      "expected_label": 1,
+      "expected_verdict": "attack",
+      "notes": "Analyst-confirmed malicious traffic sample.",
+      "sample": {
+        "timestamp": "2026-04-03 12:00:00",
+        "source_ip": "185.99.88.77",
+        "destination_ip": "10.0.0.25",
+        "protocol": "TCP",
+        "port": 443,
+        "packet_size": 1450,
+        "request_rate": 3200,
+        "failed_logins": 5,
+        "malware_signature": "suspicious.example",
+        "traffic_type": "suspicious",
+        "attack_type": "DDoS"
+      },
+      "prediction_snapshot": {
+        "prediction": null,
+        "probability": null,
+        "ai_analysis": null,
+        "model_version": null
+      }
+    },
+    {
+      "feedback_id": "fb-20260403152634389060",
+      "recorded_at": "2026-04-03T15:26:34Z",
+      "feedback_source": "test_script",
+      "expected_label": 1,
+      "expected_verdict": "attack",
+      "notes": "Analyst-confirmed malicious traffic sample.",
+      "sample": {
+        "timestamp": "2026-04-03 12:00:00",
+        "source_ip": "185.99.88.77",
+        "destination_ip": "10.0.0.25",
+        "protocol": "TCP",
+        "port": 443,
+        "packet_size": 1450,
+        "request_rate": 3200,
+        "failed_logins": 5,
+        "malware_signature": "suspicious.example",
+        "traffic_type": "suspicious",
+        "attack_type": "DDoS"
+      },
+      "prediction_snapshot": {
+        "prediction": null,
+        "probability": null,
+        "ai_analysis": null,
+        "model_version": null
+      }
+    },
+    {
+      "feedback_id": "fb-20260403153939050268",
+      "recorded_at": "2026-04-03T15:39:39Z",
+      "feedback_source": "admin",
+      "expected_label": 1,
+      "expected_verdict": "attack",
+      "notes": "Confirmed by analyst review.",
+      "sample": {
+        "timestamp": null,
+        "source_ip": "45.23.12.11",
+        "destination_ip": null,
+        "protocol": "TCP",
+        "port": 80,
+        "packet_size": 500,
+        "request_rate": 811,
+        "failed_logins": 31,
+        "malware_signature": "none",
+        "traffic_type": "normal",
+        "attack_type": "Brute Force"
+      },
+      "prediction_snapshot": {
+        "prediction": 0,
+        "probability": [
+          0.5333333333333333,
+          0.4666666666666667
+        ],
+        "ai_analysis": {
+          "risk_level": "HIGH",
+          "explanation": "Model confidence was borderline, but policy marked the traffic as dangerous. Attack type: Brute Force. Reason: Policy override triggered because suspicious indicators are high despite model uncertainty.",
+          "remediation": "Contain the source, review firewall actions, and inspect the host immediately.",
+          "policy_override": true,
+          "policy_reason": "Policy override triggered because suspicious indicators are high despite model uncertainty.",
+          "attack_type": "Brute Force",
+          "threat_intel_score": 0,
+          "blacklist_match": false
+        },
+        "model_version": null
+      }
+    },
+    {
+      "feedback_id": "fb-20260406044001295042",
+      "recorded_at": "2026-04-06T04:40:01Z",
+      "feedback_source": "Appi",
+      "expected_label": 1,
+      "expected_verdict": "attack",
+      "notes": "",
+      "sample": {
+        "timestamp": null,
+        "source_ip": "10.0.0.25",
+        "destination_ip": null,
+        "protocol": "HTTPS",
+        "port": 80,
+        "packet_size": 500,
+        "request_rate": 974,
+        "failed_logins": 14,
+        "malware_signature": "none",
+        "traffic_type": "suspicious",
+        "attack_type": "Brute Force"
+      },
+      "prediction_snapshot": {
+        "prediction": 1,
+        "probability": [
+          0.24666666666666667,
+          0.7533333333333333
+        ],
+        "ai_analysis": {
+          "risk_level": "HIGH",
+          "explanation": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+          "remediation": "Isolate host, block IP, inspect captured traffic.",
+          "policy_override": true,
+          "policy_reason": "Model classified the traffic as malicious.",
+          "attack_type": "Brute Force",
+          "threat_intel_score": 0,
+          "blacklist_match": false
+        },
+        "model_version": "model_20260405_133329_691971"
+      }
+    }
+  ],
+  "updated_at": "2026-04-06T04:40:01Z"
+}

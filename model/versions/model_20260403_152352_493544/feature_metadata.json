@@ -1,0 +1,40 @@
+{
+  "feature_columns": [
+    "timestamp",
+    "source_ip",
+    "destination_ip",
+    "protocol",
+    "port",
+    "packet_size",
+    "request_rate",
+    "failed_logins",
+    "malware_signature",
+    "traffic_type",
+    "attack_type"
+  ],
+  "categorical": [
+    "protocol",
+    "malware_signature",
+    "traffic_type",
+    "attack_type"
+  ],
+  "numeric": [
+    "timestamp",
+    "source_ip",
+    "destination_ip",
+    "port",
+    "packet_size",
+    "request_rate",
+    "failed_logins"
+  ],
+  "excluded": [
+    "timestamp",
+    "source_ip",
+    "destination_ip"
+  ],
+  "sample_count": 20001,
+  "label_distribution": {
+    "1": 18970,
+    "0": 1031
+  }
+}

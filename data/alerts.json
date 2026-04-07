@@ -1,0 +1,2735 @@
+{
+  "alerts": [
+    {
+      "alert_id": "alert-20260405124848691188",
+      "timestamp": "2026-04-05T12:48:44Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 1183,
+      "request_rate": 1486,
+      "failed_logins": 45,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 70.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1666ebba5d0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405125701400506",
+      "timestamp": "2026-04-05T12:56:57Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "DDoS",
+      "severity": "HIGH",
+      "risk_level": "CRITICAL",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 1198,
+      "request_rate": 2295,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 68.67,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DDoS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1666f09ca50>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DDoS from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405131421880155",
+      "timestamp": "2026-04-05T13:14:17Z",
+      "attacker_ip": "96.246.52.200",
+      "target_ip": "10.0.0.25",
+      "attack_type": "XSS",
+      "severity": "MEDIUM",
+      "risk_level": "MEDIUM",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1636,
+      "failed_logins": 8,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 60.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: XSS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "96.246.52.200",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/96.246.52.200?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1967372d2b0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "MEDIUM ALERT",
+          "message": "XSS from 96.246.52.200",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132539045647",
+      "timestamp": "2026-03-05 11:43:37",
+      "attacker_ip": "36.196.64.9",
+      "target_ip": "91.59.135.233",
+      "attack_type": "Spyware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 80,
+      "packet_size": 1324,
+      "request_rate": 2534,
+      "failed_logins": 26,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_spyware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Spyware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "36.196.64.9",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/36.196.64.9?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b53d9a90>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Spyware from 36.196.64.9",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132546253776",
+      "timestamp": "2026-03-05 12:56:16",
+      "attacker_ip": "13.238.133.45",
+      "target_ip": "22.136.189.181",
+      "attack_type": "XSS",
+      "severity": "MEDIUM",
+      "risk_level": "MEDIUM",
+      "protocol": "HTTP",
+      "port": 8080,
+      "packet_size": 1460,
+      "request_rate": 3554,
+      "failed_logins": 27,
+      "traffic_type": "normal",
+      "malware_signature": "hash_xss",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: XSS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "13.238.133.45",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/13.238.133.45?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b53d91d0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "MEDIUM ALERT",
+          "message": "XSS from 13.238.133.45",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132601260735",
+      "timestamp": "2026-03-05 10:27:44",
+      "attacker_ip": "60.21.254.106",
+      "target_ip": "117.15.161.156",
+      "attack_type": "Password Spraying",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 22,
+      "packet_size": 1172,
+      "request_rate": 3745,
+      "failed_logins": 30,
+      "traffic_type": "normal",
+      "malware_signature": "hash_password_spraying",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Password Spraying.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "60.21.254.106",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/60.21.254.106?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5266b10>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Password Spraying from 60.21.254.106",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132608246730",
+      "timestamp": "2026-03-05 11:59:20",
+      "attacker_ip": "201.112.213.151",
+      "target_ip": "10.112.216.162",
+      "attack_type": "DNS Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 53,
+      "packet_size": 852,
+      "request_rate": 3528,
+      "failed_logins": 48,
+      "traffic_type": "normal",
+      "malware_signature": "hash_dns_spoofing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DNS Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "201.112.213.151",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/201.112.213.151?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5266b10>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DNS Spoofing from 201.112.213.151",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132618426231",
+      "timestamp": "2026-03-05 12:43:28",
+      "attacker_ip": "60.83.222.15",
+      "target_ip": "13.5.6.191",
+      "attack_type": "Password Spraying",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 443,
+      "packet_size": 274,
+      "request_rate": 4687,
+      "failed_logins": 6,
+      "traffic_type": "normal",
+      "malware_signature": "hash_password_spraying",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Password Spraying.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "60.83.222.15",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/60.83.222.15?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561b570>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Password Spraying from 60.83.222.15",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132628574370",
+      "timestamp": "2026-03-05 14:20:23",
+      "attacker_ip": "185.135.53.141",
+      "target_ip": "176.77.244.70",
+      "attack_type": "Trojan",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 443,
+      "packet_size": 606,
+      "request_rate": 4826,
+      "failed_logins": 41,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_trojan",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Trojan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "185.135.53.141",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/185.135.53.141?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561ae00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Trojan from 185.135.53.141",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132636341235",
+      "timestamp": "2026-03-05 15:31:39",
+      "attacker_ip": "97.45.155.41",
+      "target_ip": "79.116.133.8",
+      "attack_type": "Trojan",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 21,
+      "packet_size": 408,
+      "request_rate": 151,
+      "failed_logins": 12,
+      "traffic_type": "normal",
+      "malware_signature": "hash_trojan",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Trojan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "97.45.155.41",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/97.45.155.41?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561b130>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Trojan from 97.45.155.41",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132643683930",
+      "timestamp": "2026-03-05 11:18:10",
+      "attacker_ip": "73.5.204.120",
+      "target_ip": "102.160.9.150",
+      "attack_type": "Port Scan",
+      "severity": "LOW",
+      "risk_level": "LOW",
+      "protocol": "DNS",
+      "port": 21,
+      "packet_size": 1165,
+      "request_rate": 2581,
+      "failed_logins": 50,
+      "traffic_type": "normal",
+      "malware_signature": "hash_port_scan",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Port Scan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "73.5.204.120",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/73.5.204.120?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619d00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "LOW ALERT",
+          "message": "Port Scan from 73.5.204.120",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132647376525",
+      "timestamp": "2026-03-05 14:26:26",
+      "attacker_ip": "251.161.5.243",
+      "target_ip": "163.1.144.137",
+      "attack_type": "Man in the Middle",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 80,
+      "packet_size": 287,
+      "request_rate": 2038,
+      "failed_logins": 8,
+      "traffic_type": "normal",
+      "malware_signature": "hash_man_in_the_middle",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Man in the Middle.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "251.161.5.243",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "local",
+        "note": "Geolocation skipped for private address."
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Man in the Middle from 251.161.5.243",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132654605326",
+      "timestamp": "2026-03-05 13:38:45",
+      "attacker_ip": "63.68.158.218",
+      "target_ip": "236.51.221.112",
+      "attack_type": "UDP Flood",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 8080,
+      "packet_size": 748,
+      "request_rate": 2197,
+      "failed_logins": 11,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_udp_flood",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: UDP Flood.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "63.68.158.218",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/63.68.158.218?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561b460>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "UDP Flood from 63.68.158.218",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132704832339",
+      "timestamp": "2026-03-05 13:21:00",
+      "attacker_ip": "69.179.252.76",
+      "target_ip": "221.153.97.123",
+      "attack_type": "SYN Flood",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 25,
+      "packet_size": 1213,
+      "request_rate": 3668,
+      "failed_logins": 5,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_syn_flood",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SYN Flood.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "69.179.252.76",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/69.179.252.76?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561b460>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SYN Flood from 69.179.252.76",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132714770283",
+      "timestamp": "2026-03-05 10:57:07",
+      "attacker_ip": "131.126.53.22",
+      "target_ip": "188.11.61.22",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 22,
+      "packet_size": 695,
+      "request_rate": 557,
+      "failed_logins": 47,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "131.126.53.22",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/131.126.53.22?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561ae00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 131.126.53.22",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132727189252",
+      "timestamp": "2026-03-05 14:16:16",
+      "attacker_ip": "69.79.16.246",
+      "target_ip": "6.200.69.126",
+      "attack_type": "Spyware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 8080,
+      "packet_size": 1419,
+      "request_rate": 680,
+      "failed_logins": 24,
+      "traffic_type": "normal",
+      "malware_signature": "hash_spyware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Spyware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "69.79.16.246",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/69.79.16.246?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619d00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Spyware from 69.79.16.246",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132734133735",
+      "timestamp": "2026-03-05 11:54:01",
+      "attacker_ip": "107.220.142.244",
+      "target_ip": "108.17.3.200",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 23,
+      "packet_size": 1110,
+      "request_rate": 952,
+      "failed_logins": 14,
+      "traffic_type": "normal",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "107.220.142.244",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/107.220.142.244?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619150>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 107.220.142.244",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132744471912",
+      "timestamp": "2026-03-05 13:45:24",
+      "attacker_ip": "69.30.28.246",
+      "target_ip": "83.134.177.81",
+      "attack_type": "Port Scan",
+      "severity": "LOW",
+      "risk_level": "LOW",
+      "protocol": "UDP",
+      "port": 80,
+      "packet_size": 1464,
+      "request_rate": 3733,
+      "failed_logins": 18,
+      "traffic_type": "normal",
+      "malware_signature": "hash_port_scan",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Port Scan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "69.30.28.246",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/69.30.28.246?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619150>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "LOW ALERT",
+          "message": "Port Scan from 69.30.28.246",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132752191678",
+      "timestamp": "2026-03-05 11:57:19",
+      "attacker_ip": "215.128.57.49",
+      "target_ip": "247.143.15.2",
+      "attack_type": "Worm",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 22,
+      "packet_size": 1206,
+      "request_rate": 4400,
+      "failed_logins": 35,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_worm",
+      "prediction": 1,
+      "confidence": 99.99,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Worm.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "215.128.57.49",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/215.128.57.49?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619150>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Worm from 215.128.57.49",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132759365541",
+      "timestamp": "2026-03-05 14:09:52",
+      "attacker_ip": "220.142.32.109",
+      "target_ip": "232.105.164.193",
+      "attack_type": "Command Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 8080,
+      "packet_size": 291,
+      "request_rate": 2571,
+      "failed_logins": 8,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_command_injection",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Command Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "220.142.32.109",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/220.142.32.109?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561a9c0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Command Injection from 220.142.32.109",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132806142621",
+      "timestamp": "2026-03-05 10:54:09",
+      "attacker_ip": "52.255.126.55",
+      "target_ip": "179.53.149.157",
+      "attack_type": "Trojan",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 8080,
+      "packet_size": 1402,
+      "request_rate": 4652,
+      "failed_logins": 21,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_trojan",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Trojan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "52.255.126.55",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/52.255.126.55?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b561a9c0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Trojan from 52.255.126.55",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132817776453",
+      "timestamp": "2026-03-05 11:04:45",
+      "attacker_ip": "143.3.3.161",
+      "target_ip": "250.216.100.202",
+      "attack_type": "Rootkit",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 53,
+      "packet_size": 538,
+      "request_rate": 2653,
+      "failed_logins": 6,
+      "traffic_type": "normal",
+      "malware_signature": "hash_rootkit",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Rootkit.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "143.3.3.161",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/143.3.3.161?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b56186b0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Rootkit from 143.3.3.161",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405132825501217",
+      "timestamp": "2026-03-05 13:07:55",
+      "attacker_ip": "138.243.65.42",
+      "target_ip": "237.187.98.130",
+      "attack_type": "Credential Stuffing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 22,
+      "packet_size": 830,
+      "request_rate": 1511,
+      "failed_logins": 7,
+      "traffic_type": "normal",
+      "malware_signature": "hash_credential_stuffing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Credential Stuffing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260403_153958_879830",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "138.243.65.42",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/138.243.65.42?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b5619d00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Credential Stuffing from 138.243.65.42",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133456038487",
+      "timestamp": "2026-04-05T13:34:51Z",
+      "attacker_ip": "96.18.190.164",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 2171,
+      "failed_logins": 24,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 73.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "96.18.190.164",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/96.18.190.164?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1967334e030>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 96.18.190.164",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133614966899",
+      "timestamp": "2026-03-05 13:24:44",
+      "attacker_ip": "239.123.182.113",
+      "target_ip": "173.145.195.95",
+      "attack_type": "SYN Flood",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 22,
+      "packet_size": 1342,
+      "request_rate": 4306,
+      "failed_logins": 39,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_syn_flood",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SYN Flood.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "239.123.182.113",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/239.123.182.113?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2ee00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SYN Flood from 239.123.182.113",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133622559229",
+      "timestamp": "2026-03-05 14:19:08",
+      "attacker_ip": "16.77.254.181",
+      "target_ip": "245.67.171.210",
+      "attack_type": "DDoS",
+      "severity": "HIGH",
+      "risk_level": "CRITICAL",
+      "protocol": "DNS",
+      "port": 8080,
+      "packet_size": 289,
+      "request_rate": 4594,
+      "failed_logins": 47,
+      "traffic_type": "normal",
+      "malware_signature": "hash_ddos",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DDoS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "16.77.254.181",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/16.77.254.181?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2f570>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DDoS from 16.77.254.181",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133629077457",
+      "timestamp": "2026-03-05 14:40:29",
+      "attacker_ip": "229.100.100.24",
+      "target_ip": "107.78.117.164",
+      "attack_type": "DNS Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 21,
+      "packet_size": 701,
+      "request_rate": 584,
+      "failed_logins": 2,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_dns_spoofing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DNS Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "229.100.100.24",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/229.100.100.24?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2f350>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DNS Spoofing from 229.100.100.24",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133640479522",
+      "timestamp": "2026-03-05 14:10:20",
+      "attacker_ip": "177.142.87.164",
+      "target_ip": "3.38.106.108",
+      "attack_type": "Rootkit",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 23,
+      "packet_size": 999,
+      "request_rate": 4991,
+      "failed_logins": 20,
+      "traffic_type": "normal",
+      "malware_signature": "hash_rootkit",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Rootkit.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "177.142.87.164",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/177.142.87.164?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2ff00>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Rootkit from 177.142.87.164",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133650640366",
+      "timestamp": "2026-03-05 12:48:48",
+      "attacker_ip": "94.236.131.146",
+      "target_ip": "108.75.24.212",
+      "attack_type": "ARP Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 80,
+      "packet_size": 1135,
+      "request_rate": 1217,
+      "failed_logins": 11,
+      "traffic_type": "normal",
+      "malware_signature": "hash_arp_spoofing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: ARP Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "94.236.131.146",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/94.236.131.146?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2ead0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "ARP Spoofing from 94.236.131.146",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133657615214",
+      "timestamp": "2026-03-05 12:39:26",
+      "attacker_ip": "86.136.137.15",
+      "target_ip": "21.196.39.18",
+      "attack_type": "DNS Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 23,
+      "packet_size": 269,
+      "request_rate": 3249,
+      "failed_logins": 49,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_dns_spoofing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DNS Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "86.136.137.15",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/86.136.137.15?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2ecf0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DNS Spoofing from 86.136.137.15",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405133705539975",
+      "timestamp": "2026-03-05 14:05:12",
+      "attacker_ip": "158.172.90.60",
+      "target_ip": "239.241.61.174",
+      "attack_type": "Password Spraying",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 80,
+      "packet_size": 916,
+      "request_rate": 2981,
+      "failed_logins": 47,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_password_spraying",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Password Spraying.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "158.172.90.60",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/158.172.90.60?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x196b4f2f460>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Password Spraying from 158.172.90.60",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405141733269205",
+      "timestamp": "2026-04-05T14:17:29Z",
+      "attacker_ip": "104.185.200.183",
+      "target_ip": "10.0.0.25",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1041,
+      "failed_logins": 8,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 60.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 6,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "104.185.200.183",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/104.185.200.183?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1d9685bd160>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 104.185.200.183",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405142358191067",
+      "timestamp": "2026-04-05T14:23:54Z",
+      "attacker_ip": "8.8.8.8",
+      "target_ip": "10.0.0.25",
+      "attack_type": "XSS",
+      "severity": "MEDIUM",
+      "risk_level": "MEDIUM",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 27,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 57.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: XSS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "8.8.8.8",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/8.8.8.8?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1d9686491d0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "MEDIUM ALERT",
+          "message": "XSS from 8.8.8.8",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171451114269",
+      "timestamp": "2026-03-05 12:00:34",
+      "attacker_ip": "36.162.23.26",
+      "target_ip": "44.222.243.21",
+      "attack_type": "DDoS",
+      "severity": "HIGH",
+      "risk_level": "CRITICAL",
+      "protocol": "TCP",
+      "port": 443,
+      "packet_size": 1022,
+      "request_rate": 4237,
+      "failed_logins": 26,
+      "traffic_type": "normal",
+      "malware_signature": "hash_ddos",
+      "prediction": 1,
+      "confidence": 99.97,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DDoS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "36.162.23.26",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/36.162.23.26?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x258716782f0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMdf3b6231d2b8242ec56d844550f25a33",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DDoS from 36.162.23.26",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171505494232",
+      "timestamp": "2026-03-05 13:30:04",
+      "attacker_ip": "1.144.166.74",
+      "target_ip": "204.254.4.81",
+      "attack_type": "Spyware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 22,
+      "packet_size": 279,
+      "request_rate": 2591,
+      "failed_logins": 14,
+      "traffic_type": "normal",
+      "malware_signature": "hash_spyware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Spyware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "1.144.166.74",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/1.144.166.74?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x2586a98e710>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMf64a723e1e47a865c92d74332be7747e",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Spyware from 1.144.166.74",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171518274748",
+      "timestamp": "2026-03-05 14:20:27",
+      "attacker_ip": "82.202.32.118",
+      "target_ip": "107.97.140.29",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 8080,
+      "packet_size": 1006,
+      "request_rate": 4499,
+      "failed_logins": 30,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "82.202.32.118",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/82.202.32.118?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x2586a98fb10>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMb93e1a2bcda54a1026a6822f4eff8fa8",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 82.202.32.118",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171530478043",
+      "timestamp": "2026-03-05 12:12:43",
+      "attacker_ip": "228.37.176.213",
+      "target_ip": "95.173.241.176",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 443,
+      "packet_size": 1203,
+      "request_rate": 3113,
+      "failed_logins": 48,
+      "traffic_type": "normal",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "228.37.176.213",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/228.37.176.213?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x25824f9a3f0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMab83061982b32bf42c2fdaf39b9e9fa1",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 228.37.176.213",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171544890763",
+      "timestamp": "2026-03-05 12:16:25",
+      "attacker_ip": "192.50.147.225",
+      "target_ip": "32.186.54.193",
+      "attack_type": "Credential Stuffing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 23,
+      "packet_size": 1142,
+      "request_rate": 404,
+      "failed_logins": 31,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_credential_stuffing",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Credential Stuffing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "192.50.147.225",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/192.50.147.225?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x25824f9a3f0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM623caef6a3e4da40ab1f2bb37e27f1dc",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Credential Stuffing from 192.50.147.225",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171559292659",
+      "timestamp": "2026-03-05 11:13:46",
+      "attacker_ip": "22.44.43.22",
+      "target_ip": "121.56.148.76",
+      "attack_type": "UDP Flood",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 22,
+      "packet_size": 1233,
+      "request_rate": 293,
+      "failed_logins": 35,
+      "traffic_type": "normal",
+      "malware_signature": "hash_udp_flood",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: UDP Flood.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "22.44.43.22",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/22.44.43.22?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x2586aca7ad0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMabc9e29bb68c9962f4f4fb987b19c523",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "UDP Flood from 22.44.43.22",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171613129604",
+      "timestamp": "2026-03-05 11:30:54",
+      "attacker_ip": "42.122.195.101",
+      "target_ip": "213.170.80.158",
+      "attack_type": "Command Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 553,
+      "request_rate": 4657,
+      "failed_logins": 30,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_command_injection",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Command Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "42.122.195.101",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/42.122.195.101?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x2586ad417b0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM5459adbe657582bdff86b7fd39a284c5",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Command Injection from 42.122.195.101",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260405171625795536",
+      "timestamp": "2026-03-05 10:33:03",
+      "attacker_ip": "208.175.69.186",
+      "target_ip": "189.98.190.231",
+      "attack_type": "Rootkit",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 22,
+      "packet_size": 1382,
+      "request_rate": 3660,
+      "failed_logins": 44,
+      "traffic_type": "normal",
+      "malware_signature": "hash_rootkit",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Rootkit.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "208.175.69.186",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/208.175.69.186?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x25869f7e8b0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM17981f7a61f8bf1c12090aa53b39f514",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Rootkit from 208.175.69.186",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260406044001256254",
+      "timestamp": "2026-04-06T04:40:01Z",
+      "attacker_ip": "10.0.0.25",
+      "target_ip": null,
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 974,
+      "failed_logins": 14,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 75.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260405_133329_691971",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "10.0.0.25",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "local",
+        "note": "Geolocation skipped for private address."
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 10.0.0.25",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260406044240343124",
+      "timestamp": "2026-04-06T04:42:39Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 2725,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 56.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260406052657024741",
+      "timestamp": "2026-04-06T05:26:56Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1962,
+      "failed_logins": 14,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 77.3,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "error",
+          "reason": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-35dbe5e5127sm22261985a91.1 - gsmtp')"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM1ec5d9fce838460dfb6e12de68375737",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "partial_failure"
+    },
+    {
+      "alert_id": "alert-20260406052732483347",
+      "timestamp": "2026-04-06T05:27:31Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1962,
+      "failed_logins": 14,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 77.3,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "cooldown_active"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "cooldown_active"
+        },
+        "ui": {
+          "status": "queued"
+        }
+      },
+      "cooldown_applied": true,
+      "cooldown_seconds_remaining": 25,
+      "notification_status": "cooldown_suppressed"
+    },
+    {
+      "alert_id": "alert-20260406064043111152",
+      "timestamp": "2026-04-06T06:40:42Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 56.67,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "error",
+          "reason": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2b2747612b7sm127825215ad.23 - gsmtp')"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMaa9d4417aa7d4782049b12b87d09d848",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "partial_failure"
+    },
+    {
+      "alert_id": "alert-20260406084905111018",
+      "timestamp": "2026-04-06T08:49:04Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 925,
+      "request_rate": 2895,
+      "failed_logins": 14,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 76.63,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "error",
+          "reason": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2b2749cbcafsm132866715ad.77 - gsmtp')"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM75f1022ed9a6d282627ae47b3675b306",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "partial_failure"
+    }
+  ],
+  "cooldowns": {
+    "45.23.12.11": "2026-04-06T08:49:04+00:00",
+    "96.246.52.200": "2026-04-05T13:14:17+00:00",
+    "36.196.64.9": "2026-03-05T11:43:37",
+    "13.238.133.45": "2026-03-05T12:56:16",
+    "60.21.254.106": "2026-03-05T10:27:44",
+    "201.112.213.151": "2026-03-05T11:59:20",
+    "60.83.222.15": "2026-03-05T12:43:28",
+    "185.135.53.141": "2026-03-05T14:20:23",
+    "97.45.155.41": "2026-03-05T15:31:39",
+    "73.5.204.120": "2026-03-05T11:18:10",
+    "251.161.5.243": "2026-03-05T14:26:26",
+    "63.68.158.218": "2026-03-05T13:38:45",
+    "69.179.252.76": "2026-03-05T13:21:00",
+    "131.126.53.22": "2026-03-05T10:57:07",
+    "69.79.16.246": "2026-03-05T14:16:16",
+    "107.220.142.244": "2026-03-05T11:54:01",
+    "69.30.28.246": "2026-03-05T13:45:24",
+    "215.128.57.49": "2026-03-05T11:57:19",
+    "220.142.32.109": "2026-03-05T14:09:52",
+    "52.255.126.55": "2026-03-05T10:54:09",
+    "143.3.3.161": "2026-03-05T11:04:45",
+    "138.243.65.42": "2026-03-05T13:07:55",
+    "96.18.190.164": "2026-04-05T13:34:51+00:00",
+    "239.123.182.113": "2026-03-05T13:24:44",
+    "16.77.254.181": "2026-03-05T14:19:08",
+    "229.100.100.24": "2026-03-05T14:40:29",
+    "177.142.87.164": "2026-03-05T14:10:20",
+    "94.236.131.146": "2026-03-05T12:48:48",
+    "86.136.137.15": "2026-03-05T12:39:26",
+    "158.172.90.60": "2026-03-05T14:05:12",
+    "104.185.200.183": "2026-04-05T14:17:29+00:00",
+    "8.8.8.8": "2026-04-05T14:23:54+00:00",
+    "36.162.23.26": "2026-03-05T12:00:34",
+    "1.144.166.74": "2026-03-05T13:30:04",
+    "82.202.32.118": "2026-03-05T14:20:27",
+    "228.37.176.213": "2026-03-05T12:12:43",
+    "192.50.147.225": "2026-03-05T12:16:25",
+    "22.44.43.22": "2026-03-05T11:13:46",
+    "42.122.195.101": "2026-03-05T11:30:54",
+    "208.175.69.186": "2026-03-05T10:33:03",
+    "10.0.0.25": "2026-04-06T04:40:01+00:00"
+  },
+  "geo_cache": {},
+  "updated_at": "2026-04-06T08:49:10Z"
+}

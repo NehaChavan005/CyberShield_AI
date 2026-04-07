@@ -1,0 +1,15 @@
+streamlit
+streamlit-autorefresh
+pandas
+joblib
+scikit-learn
+fastapi
+uvicorn
+PyJWT
+pydantic
+scapy
+requests
+twilio
+plotly
+python-dotenv
+geoip2
