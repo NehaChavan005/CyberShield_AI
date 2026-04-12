@@ -2685,10 +2685,196 @@
       "cooldown_applied": false,
       "cooldown_seconds_remaining": 0,
       "notification_status": "partial_failure"
+    },
+    {
+      "alert_id": "alert-20260407173923357533",
+      "timestamp": "2026-04-07T17:39:19Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Port Scan",
+      "severity": "LOW",
+      "risk_level": "LOW",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1063,
+      "failed_logins": 2,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 76.67,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Port Scan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x26bfe639010>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured",
+          "missing": [
+            "CYBERSHIELD_EMAIL_USERNAME",
+            "CYBERSHIELD_EMAIL_PASSWORD",
+            "CYBERSHIELD_EMAIL_TO"
+          ]
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "LOW ALERT",
+          "message": "Port Scan from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260412145748591323",
+      "timestamp": "2026-04-12T14:57:44Z",
+      "attacker_ip": "76.181.107.193",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1644,
+      "failed_logins": 30,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 77.3,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 6,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "76.181.107.193",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/76.181.107.193?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x17151eaaf90>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured",
+          "missing": [
+            "CYBERSHIELD_EMAIL_USERNAME",
+            "CYBERSHIELD_EMAIL_PASSWORD",
+            "CYBERSHIELD_EMAIL_TO"
+          ]
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 76.181.107.193",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260412150537406459",
+      "timestamp": "2026-04-12T15:05:33Z",
+      "attacker_ip": "98.54.218.115",
+      "target_ip": "10.0.0.25",
+      "attack_type": "XSS",
+      "severity": "MEDIUM",
+      "risk_level": "MEDIUM",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 1135,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 56.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: XSS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "98.54.218.115",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/98.54.218.115?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x171599ca0d0>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured",
+          "missing": [
+            "CYBERSHIELD_EMAIL_USERNAME",
+            "CYBERSHIELD_EMAIL_PASSWORD",
+            "CYBERSHIELD_EMAIL_TO"
+          ]
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "MEDIUM ALERT",
+          "message": "XSS from 98.54.218.115",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
     }
   ],
   "cooldowns": {
-    "45.23.12.11": "2026-04-06T08:49:04+00:00",
+    "45.23.12.11": "2026-04-07T17:39:19+00:00",
     "96.246.52.200": "2026-04-05T13:14:17+00:00",
     "36.196.64.9": "2026-03-05T11:43:37",
     "13.238.133.45": "2026-03-05T12:56:16",
@@ -2728,8 +2914,10 @@
     "22.44.43.22": "2026-03-05T11:13:46",
     "42.122.195.101": "2026-03-05T11:30:54",
     "208.175.69.186": "2026-03-05T10:33:03",
-    "10.0.0.25": "2026-04-06T04:40:01+00:00"
+    "10.0.0.25": "2026-04-06T04:40:01+00:00",
+    "76.181.107.193": "2026-04-12T14:57:44+00:00",
+    "98.54.218.115": "2026-04-12T15:05:33+00:00"
   },
   "geo_cache": {},
-  "updated_at": "2026-04-06T08:49:10Z"
+  "updated_at": "2026-04-12T15:05:37Z"
 }

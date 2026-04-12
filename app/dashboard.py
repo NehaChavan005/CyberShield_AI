@@ -20,7 +20,7 @@ from alerts.ui_alert import (
     render_audio_html,
     sync_ui_alert_state,
 )
-from auth.streamlit_auth import AUTH_BRAND_HTML, auth_page, logout_button, open_signup_page
+from auth.streamlit_auth import auth_page, logout_button, open_signup_page
 from model.model_lifecycle import (
     get_current_model_status,
     list_model_versions,
@@ -150,6 +150,19 @@ st.markdown(
   .hero .auth-title {
     justify-content: flex-start;
     margin-bottom: 0.35rem;
+  }
+  .dashboard-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .dashboard-brand-title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(0,255,255,0.22);
   }
   .metric-card {
     padding: 16px;
@@ -420,7 +433,7 @@ st.markdown(
     border-radius: 16px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
   .alert-item:last-child {
     margin-bottom: 0;
@@ -1067,7 +1080,7 @@ def render_indicator_card(indicator: dict) -> None:
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-def render_analysis_result(result: dict) -> None:
+def render_analysis_result(result: dict, show_threat_intelligence: bool = True) -> None:
     ai_analysis = result.get("ai_analysis") or {}
     threat_intel = result.get("threat_intelligence") or {}
     alert = result.get("alert") or {}
@@ -1105,6 +1118,7 @@ def render_analysis_result(result: dict) -> None:
     top_cols[2].metric("Model Verdict", "Attack" if result.get("prediction") == 1 else "Normal")
     top_cols[3].metric("Top Intel Score", threat_intel.get("highest_score", 0))
 
+    st.subheader("Simulation Analysis")
     analysis_class = "panel-critical" if risk_level in {"CRITICAL", "HIGH"} else "panel-normal"
     st.markdown(f'<div class="glass {analysis_class}">', unsafe_allow_html=True)
     summary_cols = st.columns(3)
@@ -1129,13 +1143,13 @@ def render_analysis_result(result: dict) -> None:
     st.markdown("</div>", unsafe_allow_html=True)
 
     services = threat_intel.get("services") or {}
-    if threat_intel.get("indicators") or result.get("blacklist_updates"):
+    if show_threat_intelligence and (threat_intel.get("indicators") or result.get("blacklist_updates")):
         st.markdown('<div class="glass">', unsafe_allow_html=True)
         st.subheader("Threat Intelligence")
         service_cols = st.columns(3)
         service_cols[0].metric("Indicators", len(threat_intel.get("indicators", [])))
-        service_cols[1].metric("VirusTotal", "On" if services.get("virustotal_configured") else "Off")
-        service_cols[2].metric("AbuseIPDB", "On" if services.get("abuseipdb_configured") else "Off")
+        service_cols[1].metric("VT Malicious", _max_virustotal_malicious(threat_intel))
+        service_cols[2].metric("Abuse Score", _max_abuseipdb_confidence(threat_intel))
         if threat_intel.get("indicators"):
             for indicator in threat_intel.get("indicators", []):
                 render_indicator_card(indicator)
@@ -1154,15 +1168,15 @@ def render_analysis_result(result: dict) -> None:
         alert_cols[1].metric("Severity", alert.get("severity", "LOW"))
         alert_cols[2].metric("Notifier Status", alert.get("notification_status", "pending"))
         alert_cols[3].metric("Cooldown", "Yes" if alert.get("cooldown_applied") else "No")
-        st.json(
-            {
-                "attacker_ip": alert.get("attacker_ip"),
-                "attack_type": alert.get("attack_type"),
-                "timestamp": alert.get("timestamp"),
-                "notification_results": alert.get("notification_results"),
-                "geolocation": geo,
-            }
-        )
+        info_cols = st.columns(3)
+        info_cols[0].write(f"**Attacker IP**: `{alert.get('attacker_ip', 'n/a')}`")
+        info_cols[1].write(f"**Attack Type**: {alert.get('attack_type', 'Unknown')}")
+        info_cols[2].write(f"**Timestamp**: {alert.get('timestamp', 'n/a')}")
+        if geo:
+            geo_label = ", ".join(
+                part for part in [geo.get("city"), geo.get("region"), geo.get("country")] if part
+            ) or "Unavailable"
+            st.caption(f"Geo: {geo_label}")
         st.markdown("</div>", unsafe_allow_html=True)
 
     incident_response = result.get("incident_response")
@@ -1195,29 +1209,37 @@ def render_analysis_result(result: dict) -> None:
                 )
         st.markdown("</div>", unsafe_allow_html=True)
 
-    processed = result.get("processed") or {}
-    if processed or result.get("llm_security_report"):
-        with st.expander("Technical Details"):
-            left, right = st.columns(2, gap="large")
-            with left:
-                st.subheader("Processed features")
-                if processed:
-                    st.json(processed)
-            with right:
-                st.subheader("Detailed report")
-                st.code(result.get("llm_security_report", ""))
+def _max_virustotal_malicious(payload: dict) -> int:
+    indicators = (payload or {}).get("indicators", [])
+    values = []
+    for indicator in indicators:
+        vt = indicator.get("virustotal") or {}
+        if vt.get("enabled") and not vt.get("error"):
+            values.append(int(vt.get("malicious", 0) or 0))
+    return max(values, default=0)
+
+
+def _max_abuseipdb_confidence(payload: dict) -> int:
+    indicators = (payload or {}).get("indicators", [])
+    values = []
+    for indicator in indicators:
+        abuse = indicator.get("abuseipdb") or {}
+        if abuse.get("enabled") and not abuse.get("error"):
+            values.append(int(abuse.get("confidence_score", 0) or 0))
+    return max(values, default=0)
 
 
 def render_lookup_result(lookup_result: dict) -> None:
-    services = lookup_result.get("services") or {}
     status_class = "ti-status-bad" if lookup_result.get("blacklist_match") else "ti-status-clean"
     status_text = "Blacklisted" if lookup_result.get("blacklist_match") else "Clean"
 
     header_cols = st.columns(4)
     header_cols[0].metric("Highest Intel Score", lookup_result.get("highest_score", 0))
     header_cols[1].metric("Indicators Found", len(lookup_result.get("indicators", [])))
-    header_cols[2].metric("VirusTotal", "On" if services.get("virustotal_configured") else "Off")
-    header_cols[3].markdown(
+    header_cols[2].metric("VT Malicious", _max_virustotal_malicious(lookup_result))
+    header_cols[3].metric("Abuse Score", _max_abuseipdb_confidence(lookup_result))
+
+    st.markdown(
         f'<div class="mini-card"><div class="mini-card-label">Local Status</div><div class="mini-card-value {status_class}">{status_text}</div></div>',
         unsafe_allow_html=True,
     )
@@ -1430,13 +1452,11 @@ def _render_risk_meter(score: int, analysis: dict) -> None:
 
 
 def _render_live_alert_panel(alerts: list[dict]) -> None:
-    st.markdown('<div class="glass">', unsafe_allow_html=True)
     st.markdown('<div class="dashboard-section-title">Live Alerts</div>', unsafe_allow_html=True)
     if not alerts:
         st.info("No recent alerts have been recorded yet.")
-        st.markdown("</div>", unsafe_allow_html=True)
         return
-    for alert in list(alerts[:5]):
+    for alert in list(alerts[:7]):
         level = str(alert.get("severity") or alert.get("risk_level") or "low").lower()
         tone = "critical" if level in {"critical", "high"} else "medium"
         attack_type = html.escape(str(alert.get("attack_type") or "Unknown threat"))
@@ -1463,7 +1483,6 @@ def _render_live_alert_panel(alerts: list[dict]) -> None:
             """,
             unsafe_allow_html=True,
         )
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def render_overview(user: dict) -> None:
@@ -1495,9 +1514,28 @@ def render_overview(user: dict) -> None:
         live_alerts[0] if live_alerts else None,
     )
     st.markdown(
-        f"""
+        """
         <div class="hero">
-          {AUTH_BRAND_HTML}
+          <div class="dashboard-brand">
+            <span class="auth-title-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <defs>
+                  <linearGradient id="dashboardShieldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00ffff"></stop>
+                    <stop offset="100%" stop-color="#00ff9f"></stop>
+                  </linearGradient>
+                  <linearGradient id="dashboardShieldInner" x1="20%" y1="10%" x2="80%" y2="90%">
+                    <stop offset="0%" stop-color="#0f4667"></stop>
+                    <stop offset="100%" stop-color="#09263a"></stop>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#dashboardShieldOuter)" d="M32 4 9 13v17.2c0 15.5 8.9 24.8 23 29.8 14.1-5 23-14.3 23-29.8V13L32 4Z"/>
+                <path fill="url(#dashboardShieldInner)" d="M32 10.5 14.5 17v12.9c0 11.8 6.5 19.6 17.5 23.9 11-4.3 17.5-12.1 17.5-23.9V17L32 10.5Z"/>
+                <path fill="#9fffe7" d="m27.9 35.9-5.1-5.1-3.2 3.2 8.1 8.1L44.4 25.4l-3.2-3.2-13.3 13.7Z"/>
+              </svg>
+            </span>
+            <h1 class="dashboard-brand-title">CyberShield-AI</h1>
+          </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -1515,19 +1553,16 @@ def render_overview(user: dict) -> None:
     primary_left, primary_right = st.columns([1.05, 1], gap="large")
     with primary_left:
         _render_risk_meter(risk_score, analysis)
-        st.markdown('<div class="glass">', unsafe_allow_html=True)
         st.markdown('<div class="dashboard-section-title">Real-Time Attack Count</div>', unsafe_allow_html=True)
         if not timeline_df.empty:
             _render_plotly_line_chart(timeline_df)
             st.caption("Central alert pipeline refreshes every 2 seconds and updates this attack volume graph live.")
         else:
             st.info("Timeline will populate as live malicious detections are recorded.")
-        st.markdown("</div>", unsafe_allow_html=True)
     with primary_right:
         _render_live_alert_panel(live_alerts)
 
     if not geo_df.empty:
-        st.markdown('<div class="glass">', unsafe_allow_html=True)
         st.markdown('<div class="dashboard-section-title">Geo-Location of Attackers</div>', unsafe_allow_html=True)
         st.map(geo_df[["lat", "lon"]], use_container_width=True)
         st.dataframe(
@@ -1543,26 +1578,21 @@ def render_overview(user: dict) -> None:
             hide_index=True,
         )
         st.caption("Locations are resolved from the centralized IP geolocation lookup when public attacker IPs are available.")
-        st.markdown("</div>", unsafe_allow_html=True)
 
     if not attack_type_df.empty or not severity_df.empty:
         dist_left, dist_right = st.columns(2, gap="large")
         with dist_left:
-            st.markdown('<div class="glass">', unsafe_allow_html=True)
             st.markdown('<div class="dashboard-section-title">Attack Type Distribution</div>', unsafe_allow_html=True)
             if not attack_type_df.empty:
                 _render_plotly_bar_chart(attack_type_df, "Attack Type", ["#00f5ff", "#18ffb2", "#ff9f43", "#ff5c5c"])
             else:
                 st.info("Attack type distribution will appear after the first alert.")
-            st.markdown("</div>", unsafe_allow_html=True)
         with dist_right:
-            st.markdown('<div class="glass">', unsafe_allow_html=True)
             st.markdown('<div class="dashboard-section-title">Severity Distribution</div>', unsafe_allow_html=True)
             if not severity_df.empty:
                 _render_plotly_bar_chart(severity_df, "Severity", ["#18ffb2", "#ffd166", "#ff5c5c"])
             else:
                 st.info("Severity distribution will appear after the first alert.")
-            st.markdown("</div>", unsafe_allow_html=True)
 
 
 def _get_default_feedback_sample() -> dict:
@@ -1842,7 +1872,7 @@ def render_simulation_page(user: dict) -> None:
         st.error(f"Prediction failed: {result['error']}")
         return
 
-    render_analysis_result(result)
+    render_analysis_result(result, show_threat_intelligence=False)
 
 
 def render_dataset_packet_capture_page(user: dict) -> None:
