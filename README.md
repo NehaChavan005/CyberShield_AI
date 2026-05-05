@@ -37,26 +37,109 @@ The project includes:
 
 ## Architecture
 
-High-level flow:
+CyberShield-AI follows a layered architecture. The dashboard and API act as the main entry points, the processing modules handle detection and analysis, and the storage/model layers preserve operational data and trained artifacts.
 
-1. Traffic or scan data is submitted from the dashboard or API.
-2. The prediction/scanning modules process the input.
-3. Threat intelligence and risk scoring enrich the result.
-4. Alerts, notifications, and forensic logs are generated.
-5. Analysts can review results, submit feedback, and retrain the model.
+### Architecture Diagram
 
-Core modules:
+```text
+User / Analyst
+   |
+   +--> Streamlit Dashboard
+   |      [app/dashboard.py]
+   |
+   +--> FastAPI Backend
+          [app/api.py]
+                 |
+                 v
+        Authentication Layer
+        [auth/]
+                 |
+                 v
+        Core Processing Layer
+        - Attack Prediction
+        - Threat Intelligence
+        - Vulnerability Scanning
+        - Risk Prediction
+        - Packet Capture / Replay
+        - Forensics Logging
+        - Automated Remediation
+                 |
+                 v
+        Alerting & Notification Layer
+        [alerts/]
+                 |
+                 v
+        Model Lifecycle Layer
+        [model/]
+                 |
+                 v
+        Data / Artifact Storage
+        [data/]
+        [model/versions/]
+```
 
-- [`app/dashboard.py`](e:/P/CyberShield-AI/app/dashboard.py): main Streamlit SOC dashboard
-- [`app/api.py`](e:/P/CyberShield-AI/app/api.py): FastAPI service layer
-- [`utils/attack_predictor.py`](e:/P/CyberShield-AI/utils/attack_predictor.py): model inference pipeline
-- [`utils/threat_intelligence.py`](e:/P/CyberShield-AI/utils/threat_intelligence.py): blacklist + external intel enrichment
-- [`utils/vulnerability_scanner.py`](e:/P/CyberShield-AI/utils/vulnerability_scanner.py): TCP port scanning and findings
-- [`utils/packet_capture.py`](e:/P/CyberShield-AI/utils/packet_capture.py): dataset replay and PCAP generation
-- [`alerts/alert_manager.py`](e:/P/CyberShield-AI/alerts/alert_manager.py): alert persistence, cooldowns, notifications, geolocation
-- [`utils/forensics.py`](e:/P/CyberShield-AI/utils/forensics.py): event logging, analysis, CSV/PDF export
-- [`model/model_lifecycle.py`](e:/P/CyberShield-AI/model/model_lifecycle.py): feedback, retraining, version inventory
-- [`model/train_model.py`](e:/P/CyberShield-AI/model/train_model.py): model training and artifact versioning
+### Layer Breakdown
+
+#### 1. Presentation Layer
+
+- **Primary module**: [`app/dashboard.py`](e:/P/CyberShield-AI/app/dashboard.py)
+- **Role**: Provides the SOC-style interface used by analysts
+- **Functions**: Overview metrics, model lifecycle, traffic simulation, packet replay, threat intelligence, vulnerability scanning, and forensics views
+
+#### 2. API Layer
+
+- **Primary module**: [`app/api.py`](e:/P/CyberShield-AI/app/api.py)
+- **Role**: Exposes backend capabilities for programmatic use
+- **Functions**: Prediction, threat intelligence checks, vulnerability scans, packet replay, alert queries, forensics exports, and model operations
+
+#### 3. Authentication Layer
+
+- **Primary modules**: [`auth/`](e:/P/CyberShield-AI/auth)
+- **Role**: Protects user access across the dashboard and API
+- **Functions**: Login, JWT token creation, route protection, and Streamlit session authentication
+
+#### 4. Core Processing Layer
+
+- **Primary modules**: [`utils/`](e:/P/CyberShield-AI/utils)
+- **Role**: Runs the main cybersecurity and ML workflows
+- **Functions**:
+  - [`utils/attack_predictor.py`](e:/P/CyberShield-AI/utils/attack_predictor.py): traffic preprocessing, model loading, prediction, risk calculation, threat-enriched results, and forensic logging
+  - [`utils/threat_intelligence.py`](e:/P/CyberShield-AI/utils/threat_intelligence.py): local blacklist checks and optional VirusTotal / AbuseIPDB enrichment
+  - [`utils/vulnerability_scanner.py`](e:/P/CyberShield-AI/utils/vulnerability_scanner.py): host and port scanning with exposure and misconfiguration findings
+  - [`utils/risk_prediction.py`](e:/P/CyberShield-AI/utils/risk_prediction.py): exposure-based risk scoring from scan results
+  - [`utils/packet_capture.py`](e:/P/CyberShield-AI/utils/packet_capture.py): dataset replay and packet-analysis support
+  - [`utils/forensics.py`](e:/P/CyberShield-AI/utils/forensics.py): event storage, investigation history, and CSV/PDF export
+  - [`utils/ai_remediation.py`](e:/P/CyberShield-AI/utils/ai_remediation.py): optional automated containment actions
+
+#### 5. Alerting Layer
+
+- **Primary modules**: [`alerts/`](e:/P/CyberShield-AI/alerts)
+- **Main coordinator**: [`alerts/alert_manager.py`](e:/P/CyberShield-AI/alerts/alert_manager.py)
+- **Role**: Converts detections and findings into actionable alerts
+- **Functions**: Alert generation, cooldown handling, persistence, and UI/email/SMS notifications
+
+#### 6. Model Lifecycle Layer
+
+- **Primary modules**: [`model/`](e:/P/CyberShield-AI/model)
+- **Role**: Manages the learning lifecycle of the detection model
+- **Functions**: Training, retraining, feedback capture, version management, and current model status tracking
+
+#### 7. Data and Storage Layer
+
+- **Primary modules**: [`data/`](e:/P/CyberShield-AI/data), [`model/`](e:/P/CyberShield-AI/model), [`model/versions/`](e:/P/CyberShield-AI/model/versions)
+- **Role**: Stores operational history and model artifacts
+- **Functions**: Datasets, blacklist history, alerts, forensic logs, feedback data, generated reports, and versioned model files
+
+### Request Flow
+
+1. Traffic, scan, or indicator input is submitted from the Streamlit dashboard or FastAPI endpoint.
+2. The authentication layer validates the user for protected flows.
+3. The relevant core module processes the request.
+4. The ML model predicts malicious activity or the scanner analyzes exposure.
+5. Threat intelligence and risk scoring enrich the result.
+6. Alerts, notifications, and forensic records are generated when applicable.
+7. Analysts review the output in the dashboard or via API responses.
+8. Feedback can be submitted to support retraining and model version updates.
 
 ## Project Structure
 

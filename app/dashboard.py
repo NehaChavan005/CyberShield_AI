@@ -30,6 +30,7 @@ from model.model_lifecycle import (
 from utils.attack_predictor import predict_attack
 from utils.forensics import analyze_attack_history, export_attack_history_csv, export_attack_history_pdf, load_attack_history
 from utils.packet_capture import run_dataset_packet_capture
+from utils.risk_prediction import predict_scan_risk
 from utils.threat_intelligence import add_to_blacklist, enrich_threat_intelligence, load_blacklist_db
 from utils.vulnerability_scanner import scan_target
 
@@ -2174,6 +2175,14 @@ def render_vulnerability_scanner_page(user: dict) -> None:
     if not result:
         return
 
+    if not result.get("risk_prediction"):
+        result["risk_prediction"] = predict_scan_risk(
+            open_ports=result.get("open_ports", []),
+            findings=result.get("misconfigurations", []),
+            overall_risk=result.get("overall_risk"),
+        )
+        st.session_state["latest_vulnerability_scan"] = result
+
     metric_cols = st.columns(4)
     metric_cols[0].metric("Overall Risk", result.get("overall_risk", "LOW"))
     metric_cols[1].metric("Open Ports", len(result.get("open_ports", [])))
@@ -2181,7 +2190,32 @@ def render_vulnerability_scanner_page(user: dict) -> None:
     metric_cols[3].metric("Findings", len(result.get("misconfigurations", [])))
     render_result_banner("Scan complete", result.get("summary", "Scan finished."), "warn" if result.get("misconfigurations") else "good")
 
-    ports_tab, findings_tab, raw_tab = st.tabs(["Open Ports", "Misconfigurations", "Raw Results"])
+    risk_prediction = result.get("risk_prediction") or {}
+    if risk_prediction:
+        st.markdown('<div class="glass">', unsafe_allow_html=True)
+        st.subheader("Predicted Attack Risk")
+        risk_cols = st.columns(4)
+        risk_cols[0].metric("Risk Score", risk_prediction.get("risk_score", 0))
+        risk_cols[1].metric("Exposure Score", risk_prediction.get("exposure_score", 0))
+        risk_cols[2].metric("Exploit Likelihood", risk_prediction.get("exploit_likelihood", 0))
+        risk_cols[3].metric("Risk Label", risk_prediction.get("risk_label", "LOW"))
+
+        vectors = risk_prediction.get("likely_attack_vectors", [])
+        if vectors:
+            st.markdown("### Likely Attack Vectors")
+            vector_rows = [
+                {
+                    "Attack Vector": item.get("title"),
+                    "Likelihood": item.get("likelihood"),
+                    "Related Ports": ", ".join(str(port) for port in item.get("related_ports", [])) or "n/a",
+                    "Reason": item.get("reason"),
+                }
+                for item in vectors
+            ]
+            st.dataframe(pd.DataFrame(vector_rows), use_container_width=True, hide_index=True)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    ports_tab, findings_tab = st.tabs(["Open Ports", "Misconfigurations"])
     with ports_tab:
         open_ports = result.get("open_ports", [])
         if open_ports:
@@ -2201,9 +2235,6 @@ def render_vulnerability_scanner_page(user: dict) -> None:
                 )
         else:
             st.success("No misconfiguration heuristics were triggered by this scan.")
-
-    with raw_tab:
-        st.json(result)
 
 
 user = auth_page()

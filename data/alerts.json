@@ -2871,10 +2871,1868 @@
       "cooldown_applied": false,
       "cooldown_seconds_remaining": 0,
       "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260412153143059635",
+      "timestamp": "2026-04-12T15:31:38Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 56.67,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x17151b3ca50>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured",
+          "missing": [
+            "CYBERSHIELD_EMAIL_USERNAME",
+            "CYBERSHIELD_EMAIL_PASSWORD",
+            "CYBERSHIELD_EMAIL_TO"
+          ]
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260412153207329691",
+      "timestamp": "2026-04-12T15:32:03Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 56.67,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1711193ac40>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "cooldown_active"
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "cooldown_active"
+        },
+        "ui": {
+          "status": "queued"
+        }
+      },
+      "cooldown_applied": true,
+      "cooldown_seconds_remaining": 35,
+      "notification_status": "cooldown_suppressed"
+    },
+    {
+      "alert_id": "alert-20260412163643417042",
+      "timestamp": "2026-04-12T16:36:39Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 3643,
+      "failed_logins": 17,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 75.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "45.23.12.11",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "HTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json/45.23.12.11?fields=status%2Cmessage%2Ccountry%2CregionName%2Ccity%2Clat%2Clon%2Cisp%2Corg%2Cquery (Caused by ConnectTimeoutError(<HTTPConnection(host='ip-api.com', port=80) at 0x1711193a520>, 'Connection to ip-api.com timed out. (connect timeout=4)'))"
+      },
+      "notification_results": {
+        "email": {
+          "status": "skipped",
+          "reason": "email_env_not_configured",
+          "missing": [
+            "CYBERSHIELD_EMAIL_USERNAME",
+            "CYBERSHIELD_EMAIL_PASSWORD",
+            "CYBERSHIELD_EMAIL_TO"
+          ]
+        },
+        "sms": {
+          "status": "skipped",
+          "reason": "twilio_env_not_configured"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "skipped"
+    },
+    {
+      "alert_id": "alert-20260413043135398091",
+      "timestamp": "2026-04-13T04:31:34Z",
+      "attacker_ip": "76.132.253.236",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Port Scan",
+      "severity": "LOW",
+      "risk_level": "LOW",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 75.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Port Scan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "76.132.253.236",
+        "country": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "lat": 37.3372,
+        "lon": -121.798,
+        "isp": "Comcast Cable Communications, LLC",
+        "org": "Comcast Cable Communications, LLC",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM2557009c4ed496fdccafb897b88ff70f",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "LOW ALERT",
+          "message": "Port Scan from 76.132.253.236",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043634733644",
+      "timestamp": "2026-03-05 10:43:49",
+      "attacker_ip": "218.183.50.142",
+      "target_ip": "206.191.84.43",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 443,
+      "packet_size": 579,
+      "request_rate": 4311,
+      "failed_logins": 7,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "218.183.50.142",
+        "country": "Japan",
+        "region": "Tokyo",
+        "city": "Minato",
+        "lat": 35.6629,
+        "lon": 139.761,
+        "isp": "SoftBank Corp.",
+        "org": "Japan Nation-wide Network of Softbank BB Corp.",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM5cb47bc54742c8621e1fbe49812ddee2",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 218.183.50.142",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043654106993",
+      "timestamp": "2026-03-05 11:57:11",
+      "attacker_ip": "204.124.212.185",
+      "target_ip": "43.62.233.14",
+      "attack_type": "Port Scan",
+      "severity": "LOW",
+      "risk_level": "LOW",
+      "protocol": "HTTPS",
+      "port": 25,
+      "packet_size": 1404,
+      "request_rate": 4747,
+      "failed_logins": 27,
+      "traffic_type": "normal",
+      "malware_signature": "hash_port_scan",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Port Scan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "204.124.212.185",
+        "country": "United States",
+        "region": "California",
+        "city": "Morgan Hill",
+        "lat": 37.1184,
+        "lon": -121.637,
+        "isp": "Custom Chrome",
+        "org": "Custom Chrome",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM6b424cbd27f684a801afdad0e4112f7b",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "LOW ALERT",
+          "message": "Port Scan from 204.124.212.185",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043707726310",
+      "timestamp": "2026-03-05 12:57:46",
+      "attacker_ip": "18.115.131.173",
+      "target_ip": "185.227.92.3",
+      "attack_type": "Rootkit",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 8080,
+      "packet_size": 1202,
+      "request_rate": 2478,
+      "failed_logins": 2,
+      "traffic_type": "normal",
+      "malware_signature": "hash_rootkit",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Rootkit.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "18.115.131.173",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "lat": 40.7128,
+        "lon": -74.006,
+        "isp": "Amazon.com, Inc.",
+        "org": "Amazon Technologies Inc",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM8d63bdf15ba12bc5f01557cf4fa4e97f",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Rootkit from 18.115.131.173",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043721552057",
+      "timestamp": "2026-03-05 11:03:33",
+      "attacker_ip": "241.127.210.252",
+      "target_ip": "164.109.129.216",
+      "attack_type": "Directory Traversal",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 22,
+      "packet_size": 293,
+      "request_rate": 3931,
+      "failed_logins": 13,
+      "traffic_type": "normal",
+      "malware_signature": "hash_directory_traversal",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Directory Traversal.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "241.127.210.252",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "local",
+        "note": "Geolocation skipped for private address."
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM94665ae5d3969ca2b59a1bb862aa0e0e",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Directory Traversal from 241.127.210.252",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043736670874",
+      "timestamp": "2026-03-05 13:30:11",
+      "attacker_ip": "107.227.50.243",
+      "target_ip": "58.93.85.136",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 443,
+      "packet_size": 304,
+      "request_rate": 956,
+      "failed_logins": 24,
+      "traffic_type": "normal",
+      "malware_signature": "hash_brute_force",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "107.227.50.243",
+        "country": "United States",
+        "region": "Texas",
+        "city": "Dallas",
+        "lat": 32.7796,
+        "lon": -96.7989,
+        "isp": "AT&T Enterprises",
+        "org": "AT&T Enterprises, LLC",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM5daff0d458d014f18068e74659f201e4",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 107.227.50.243",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043751217234",
+      "timestamp": "2026-03-05 15:33:11",
+      "attacker_ip": "63.234.93.111",
+      "target_ip": "95.121.33.219",
+      "attack_type": "Command Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 443,
+      "packet_size": 1148,
+      "request_rate": 2935,
+      "failed_logins": 3,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_command_injection",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Command Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "63.234.93.111",
+        "country": "United States",
+        "region": "Colorado",
+        "city": "Englewood",
+        "lat": 39.5802,
+        "lon": -104.9038,
+        "isp": "CenturyLink Communications",
+        "org": "United Communications Systems",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMa6d9a193941d5067f3b5d746113f1e41",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Command Injection from 63.234.93.111",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413043802054465",
+      "timestamp": "2026-03-05 10:03:38",
+      "attacker_ip": "111.177.200.238",
+      "target_ip": "76.113.158.220",
+      "attack_type": "Command Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 443,
+      "packet_size": 982,
+      "request_rate": 3665,
+      "failed_logins": 38,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_command_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Command Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "111.177.200.238",
+        "country": "China",
+        "region": "Hubei",
+        "city": "Shizishan",
+        "lat": 30.5454,
+        "lon": 114.342,
+        "isp": "Chinanet",
+        "org": "Chinanet HB",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM4724f5baa43bb04645927ba0eca2a64e",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Command Injection from 111.177.200.238",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413053743641027",
+      "timestamp": "2026-04-13T05:37:41Z",
+      "attacker_ip": "194.180.191.19 ",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 612,
+      "failed_logins": 26,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 79.3,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 5,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "194.180.191.19 ",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "invalid query"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM658e96fa2569010ffc1184c6817e4760",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 194.180.191.19 ",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413053945129600",
+      "timestamp": "2026-03-05 11:28:35",
+      "attacker_ip": "166.190.135.180",
+      "target_ip": "219.172.249.143",
+      "attack_type": "ARP Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 443,
+      "packet_size": 667,
+      "request_rate": 1278,
+      "failed_logins": 22,
+      "traffic_type": "normal",
+      "malware_signature": "hash_arp_spoofing",
+      "prediction": 1,
+      "confidence": 99.98,
+      "summary": "Model flagged the sample as malicious. Detected attack type: ARP Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "166.190.135.180",
+        "country": "United States",
+        "region": "Texas",
+        "city": "Dallas",
+        "lat": 32.7796,
+        "lon": -96.7989,
+        "isp": "AT&T Enterprises",
+        "org": "AT&T Enterprises, LLC",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMbafaa45664d6d013e70f556a7ae55be9",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "ARP Spoofing from 166.190.135.180",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054018809205",
+      "timestamp": "2026-03-05 12:24:45",
+      "attacker_ip": "6.255.84.14",
+      "target_ip": "2.1.162.254",
+      "attack_type": "Ransomware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 22,
+      "packet_size": 520,
+      "request_rate": 4459,
+      "failed_logins": 10,
+      "traffic_type": "normal",
+      "malware_signature": "hash_ransomware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Ransomware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "6.255.84.14",
+        "country": "United States",
+        "region": "Ohio",
+        "city": "Columbus",
+        "lat": 39.9819,
+        "lon": -82.9048,
+        "isp": "CONUS-YPG",
+        "org": "United States Department of Defense",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM69300f9a1543a5257363b3612286fb9b",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Ransomware from 6.255.84.14",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054117647698",
+      "timestamp": "2026-03-05 10:41:20",
+      "attacker_ip": "77.121.46.140",
+      "target_ip": "179.32.12.17",
+      "attack_type": "Trojan",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 53,
+      "packet_size": 1232,
+      "request_rate": 3104,
+      "failed_logins": 26,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_trojan",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Trojan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "77.121.46.140",
+        "country": "Russia",
+        "region": "Moscow",
+        "city": "Moscow",
+        "lat": 55.7289,
+        "lon": 37.6453,
+        "isp": "Telecommunication Systems LLC",
+        "org": "",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM338ed58e2a917aba77b0d88e61b91f6d",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Trojan from 77.121.46.140",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054143789868",
+      "timestamp": "2026-03-05 11:50:22",
+      "attacker_ip": "66.238.245.30",
+      "target_ip": "135.27.46.103",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 21,
+      "packet_size": 466,
+      "request_rate": 1058,
+      "failed_logins": 50,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_sql_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "66.238.245.30",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Smyrna",
+        "lat": 35.9698,
+        "lon": -86.5061,
+        "isp": "Verizon Business",
+        "org": "Verizon Business",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMc02b04c02f06ba8a0cc62a05a61426a3",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 66.238.245.30",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054218595876",
+      "timestamp": "2026-03-05 11:10:41",
+      "attacker_ip": "249.243.67.70",
+      "target_ip": "126.215.192.196",
+      "attack_type": "Rootkit",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 25,
+      "packet_size": 268,
+      "request_rate": 4205,
+      "failed_logins": 17,
+      "traffic_type": "normal",
+      "malware_signature": "hash_rootkit",
+      "prediction": 1,
+      "confidence": 99.98,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Rootkit.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "249.243.67.70",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "local",
+        "note": "Geolocation skipped for private address."
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM49fc0616480b7dbf88a9a52ea07d563f",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Rootkit from 249.243.67.70",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054253381209",
+      "timestamp": "2026-03-05 15:05:24",
+      "attacker_ip": "5.177.249.242",
+      "target_ip": "255.125.172.135",
+      "attack_type": "Spyware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 8080,
+      "packet_size": 565,
+      "request_rate": 3992,
+      "failed_logins": 6,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_spyware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Spyware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "5.177.249.242",
+        "country": "T\u00fcrkiye",
+        "region": "Kayseri",
+        "city": "Kayseri",
+        "lat": 38.8787,
+        "lon": 35.3801,
+        "isp": "TT Mobil Iletisim Hizmetleri",
+        "org": "Avea Iletisim Hizmetleri",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM621fa1c1b986d0485fe2d378a485746e",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Spyware from 5.177.249.242",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413054308253045",
+      "timestamp": "2026-03-05 15:23:34",
+      "attacker_ip": "229.83.180.170",
+      "target_ip": "231.12.255.198",
+      "attack_type": "UDP Flood",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 443,
+      "packet_size": 515,
+      "request_rate": 2224,
+      "failed_logins": 16,
+      "traffic_type": "normal",
+      "malware_signature": "hash_udp_flood",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: UDP Flood.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "229.83.180.170",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "reserved range"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMcf1f82f77d66560a49bef6dbc4fd1019",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "UDP Flood from 229.83.180.170",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413062646887761",
+      "timestamp": "2026-04-13T06:26:45Z",
+      "attacker_ip": "76.132.253.236",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 75.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "76.132.253.236",
+        "country": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "lat": 37.3372,
+        "lon": -121.798,
+        "isp": "Comcast Cable Communications, LLC",
+        "org": "Comcast Cable Communications, LLC",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM6934e3b744a9b58da516d6729db66655",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 76.132.253.236",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260413070033370784",
+      "timestamp": "2026-04-13T07:00:31Z",
+      "attacker_ip": "76.124.151.12",
+      "target_ip": "10.0.0.25",
+      "attack_type": "DDoS",
+      "severity": "HIGH",
+      "risk_level": "CRITICAL",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 100,
+      "failed_logins": 0,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 75.33,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DDoS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "76.124.151.12",
+        "country": "United States",
+        "region": "Pennsylvania",
+        "city": "Elkins Park",
+        "lat": 40.0782,
+        "lon": -75.1299,
+        "isp": "Comcast Cable Communications, LLC",
+        "org": "Comcast Cable Communications, Inc.",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM72f1cda06dcfdbc6b93a63b642c168ee",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DDoS from 76.124.151.12",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084012637607",
+      "timestamp": "2026-04-17T08:40:11Z",
+      "attacker_ip": "45.23.12.11",
+      "target_ip": "10.0.0.25",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 80,
+      "packet_size": 500,
+      "request_rate": 4738,
+      "failed_logins": 15,
+      "traffic_type": "suspicious",
+      "malware_signature": "none",
+      "prediction": 1,
+      "confidence": 77.3,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.23.12.11",
+        "country": "United States",
+        "region": "Tennessee",
+        "city": "Lenoir City",
+        "lat": 35.8083,
+        "lon": -84.27,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "AT&T Corp",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM46bedd09295a38c62ceda2bca7c6cd93",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 45.23.12.11",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084307473944",
+      "timestamp": "2026-03-05 11:15:51",
+      "attacker_ip": "220.231.81.10",
+      "target_ip": "72.63.61.207",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 80,
+      "packet_size": 737,
+      "request_rate": 2501,
+      "failed_logins": 42,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_sql_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "220.231.81.10",
+        "country": "Vietnam",
+        "region": "Hanoi",
+        "city": "Hanoi",
+        "lat": 21.0278,
+        "lon": 105.834,
+        "isp": "Viettel Corporation",
+        "org": "Viettel Group",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMc2a09c8f25b843403b2f9b55230cff42",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 220.231.81.10",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084318848553",
+      "timestamp": "2026-03-05 14:34:00",
+      "attacker_ip": "227.201.121.151",
+      "target_ip": "154.27.65.157",
+      "attack_type": "Brute Force",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTP",
+      "port": 21,
+      "packet_size": 280,
+      "request_rate": 1110,
+      "failed_logins": 16,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_brute_force",
+      "prediction": 1,
+      "confidence": 99.98,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Brute Force.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "unavailable",
+        "query": "227.201.121.151",
+        "country": null,
+        "region": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "isp": null,
+        "org": null,
+        "source": "ip-api",
+        "note": "reserved range"
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM87ee6c9af9b390096671478a1fa9ba30",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Brute Force from 227.201.121.151",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084330561655",
+      "timestamp": "2026-03-05 15:15:12",
+      "attacker_ip": "12.213.85.28",
+      "target_ip": "21.95.132.137",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 23,
+      "packet_size": 462,
+      "request_rate": 3935,
+      "failed_logins": 30,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_sql_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "12.213.85.28",
+        "country": "United States",
+        "region": "Colorado",
+        "city": "Englewood",
+        "lat": 39.5589,
+        "lon": -104.86,
+        "isp": "AT&T Enterprises, LLC",
+        "org": "Wild Blue Communications",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM9ac34b0ebcd033c76eb80fff8db9489a",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 12.213.85.28",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084341616584",
+      "timestamp": "2026-03-05 14:20:24",
+      "attacker_ip": "187.187.48.175",
+      "target_ip": "120.81.197.229",
+      "attack_type": "DNS Spoofing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "TCP",
+      "port": 25,
+      "packet_size": 1448,
+      "request_rate": 4756,
+      "failed_logins": 19,
+      "traffic_type": "normal",
+      "malware_signature": "hash_dns_spoofing",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DNS Spoofing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "187.187.48.175",
+        "country": "Mexico",
+        "region": "Sonora",
+        "city": "Ciudad Obreg\u00f3n",
+        "lat": 27.4828,
+        "lon": -109.93,
+        "isp": "Mexico Red de Telecomunicaciones, S. de R.L. de C.V.",
+        "org": "Mexico Red de Telecomunicaciones, S. de R.L. de C.V",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMf03165ebf44ae5d851604c14248ad80e",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DNS Spoofing from 187.187.48.175",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084351914566",
+      "timestamp": "2026-03-05 11:05:12",
+      "attacker_ip": "63.217.68.53",
+      "target_ip": "66.254.114.186",
+      "attack_type": "Credential Stuffing",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 21,
+      "packet_size": 1080,
+      "request_rate": 1453,
+      "failed_logins": 39,
+      "traffic_type": "normal",
+      "malware_signature": "hash_credential_stuffing",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Credential Stuffing.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "63.217.68.53",
+        "country": "Hong Kong",
+        "region": "Wan Chai",
+        "city": "Happy Valley",
+        "lat": 22.2702,
+        "lon": 114.1841,
+        "isp": "Gateway Communications",
+        "org": "PCCW Global, Inc.",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMf65c1e019e9645a165940c72a77d39e3",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Credential Stuffing from 63.217.68.53",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084403475114",
+      "timestamp": "2026-03-05 15:00:21",
+      "attacker_ip": "32.94.49.196",
+      "target_ip": "7.166.19.147",
+      "attack_type": "Spyware",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "HTTPS",
+      "port": 443,
+      "packet_size": 430,
+      "request_rate": 2002,
+      "failed_logins": 9,
+      "traffic_type": "normal",
+      "malware_signature": "hash_spyware",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Spyware.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "32.94.49.196",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "lat": 40.7128,
+        "lon": -74.006,
+        "isp": "AT&T Corp.",
+        "org": "AT&T Global Network Services, LLC",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM391d9a7744c6ce56ffa94b01c4869533",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Spyware from 32.94.49.196",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084415199225",
+      "timestamp": "2026-03-05 12:23:46",
+      "attacker_ip": "48.102.1.218",
+      "target_ip": "136.174.207.36",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 22,
+      "packet_size": 725,
+      "request_rate": 3332,
+      "failed_logins": 21,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_sql_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "48.102.1.218",
+        "country": "United States",
+        "region": "New Jersey",
+        "city": "Newark",
+        "lat": 40.737,
+        "lon": -74.1717,
+        "isp": "The Prudential Insurance Company of America",
+        "org": "The Prudential Insurance Company of America",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM235131868ab16e868c18a7d44c5cb1e3",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 48.102.1.218",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084427087493",
+      "timestamp": "2026-03-05 11:48:44",
+      "attacker_ip": "108.96.36.59",
+      "target_ip": "204.188.10.115",
+      "attack_type": "Trojan",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "DNS",
+      "port": 21,
+      "packet_size": 578,
+      "request_rate": 260,
+      "failed_logins": 49,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_trojan",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: Trojan.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "108.96.36.59",
+        "country": "United Kingdom",
+        "region": "England",
+        "city": "City of London",
+        "lat": 51.5121,
+        "lon": -0.0005238,
+        "isp": "Amazon.com, Inc.",
+        "org": "Amazon.com, Inc.",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SMe61b521694d61793ee55b1d8156315d7",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "Trojan from 108.96.36.59",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084437783128",
+      "timestamp": "2026-03-05 13:28:40",
+      "attacker_ip": "45.208.228.65",
+      "target_ip": "31.57.52.170",
+      "attack_type": "DDoS",
+      "severity": "HIGH",
+      "risk_level": "CRITICAL",
+      "protocol": "DNS",
+      "port": 80,
+      "packet_size": 1472,
+      "request_rate": 3180,
+      "failed_logins": 9,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_ddos",
+      "prediction": 1,
+      "confidence": 100.0,
+      "summary": "Model flagged the sample as malicious. Detected attack type: DDoS.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "45.208.228.65",
+        "country": "Ghana",
+        "region": "Greater Accra Region",
+        "city": "Accra",
+        "lat": 5.56998,
+        "lon": -0.197581,
+        "isp": "Airtel Ghana",
+        "org": "",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "sent",
+          "message_sid": "SM2811fb732896c9c84bb118a749bb5c59",
+          "provider": "twilio"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "DDoS from 45.208.228.65",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "sent"
+    },
+    {
+      "alert_id": "alert-20260417084450352897",
+      "timestamp": "2026-03-05 12:38:29",
+      "attacker_ip": "78.179.170.44",
+      "target_ip": "138.189.187.110",
+      "attack_type": "SQL Injection",
+      "severity": "HIGH",
+      "risk_level": "HIGH",
+      "protocol": "UDP",
+      "port": 80,
+      "packet_size": 431,
+      "request_rate": 136,
+      "failed_logins": 18,
+      "traffic_type": "suspicious",
+      "malware_signature": "hash_sql_injection",
+      "prediction": 1,
+      "confidence": 99.96,
+      "summary": "Model flagged the sample as malicious. Detected attack type: SQL Injection.",
+      "remediation": "Isolate host, block IP, inspect captured traffic.",
+      "policy_override": true,
+      "threat_intel_score": 0,
+      "blacklist_match": false,
+      "model_version": "model_20260406_044045_307601",
+      "geolocation": {
+        "status": "success",
+        "query": "78.179.170.44",
+        "country": "Turkey",
+        "region": "Bolu",
+        "city": "Bolu",
+        "lat": 40.7325,
+        "lon": 31.6082,
+        "isp": "Turk Telekomunikasyon A.S",
+        "org": "TurkTelecom",
+        "source": "ip-api",
+        "note": null
+      },
+      "notification_results": {
+        "email": {
+          "status": "sent",
+          "provider": "smtp"
+        },
+        "sms": {
+          "status": "error",
+          "reason": "('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))"
+        },
+        "ui": {
+          "status": "queued",
+          "title": "HIGH ALERT",
+          "message": "SQL Injection from 78.179.170.44",
+          "audio": "embedded_alert_wav",
+          "banner": "soc_alert_banner"
+        }
+      },
+      "cooldown_applied": false,
+      "cooldown_seconds_remaining": 0,
+      "notification_status": "partial_failure"
     }
   ],
   "cooldowns": {
-    "45.23.12.11": "2026-04-07T17:39:19+00:00",
+    "45.23.12.11": "2026-04-17T08:40:11+00:00",
     "96.246.52.200": "2026-04-05T13:14:17+00:00",
     "36.196.64.9": "2026-03-05T11:43:37",
     "13.238.133.45": "2026-03-05T12:56:16",
@@ -2916,8 +4774,35 @@
     "208.175.69.186": "2026-03-05T10:33:03",
     "10.0.0.25": "2026-04-06T04:40:01+00:00",
     "76.181.107.193": "2026-04-12T14:57:44+00:00",
-    "98.54.218.115": "2026-04-12T15:05:33+00:00"
+    "98.54.218.115": "2026-04-12T15:05:33+00:00",
+    "76.132.253.236": "2026-04-13T06:26:45+00:00",
+    "218.183.50.142": "2026-03-05T10:43:49",
+    "204.124.212.185": "2026-03-05T11:57:11",
+    "18.115.131.173": "2026-03-05T12:57:46",
+    "241.127.210.252": "2026-03-05T11:03:33",
+    "107.227.50.243": "2026-03-05T13:30:11",
+    "63.234.93.111": "2026-03-05T15:33:11",
+    "111.177.200.238": "2026-03-05T10:03:38",
+    "194.180.191.19": "2026-04-13T05:37:41+00:00",
+    "166.190.135.180": "2026-03-05T11:28:35",
+    "6.255.84.14": "2026-03-05T12:24:45",
+    "77.121.46.140": "2026-03-05T10:41:20",
+    "66.238.245.30": "2026-03-05T11:50:22",
+    "249.243.67.70": "2026-03-05T11:10:41",
+    "5.177.249.242": "2026-03-05T15:05:24",
+    "229.83.180.170": "2026-03-05T15:23:34",
+    "76.124.151.12": "2026-04-13T07:00:31+00:00",
+    "220.231.81.10": "2026-03-05T11:15:51",
+    "227.201.121.151": "2026-03-05T14:34:00",
+    "12.213.85.28": "2026-03-05T15:15:12",
+    "187.187.48.175": "2026-03-05T14:20:24",
+    "63.217.68.53": "2026-03-05T11:05:12",
+    "32.94.49.196": "2026-03-05T15:00:21",
+    "48.102.1.218": "2026-03-05T12:23:46",
+    "108.96.36.59": "2026-03-05T11:48:44",
+    "45.208.228.65": "2026-03-05T13:28:40",
+    "78.179.170.44": "2026-03-05T12:38:29"
   },
   "geo_cache": {},
-  "updated_at": "2026-04-12T15:05:37Z"
+  "updated_at": "2026-04-17T08:48:29Z"
 }

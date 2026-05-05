@@ -13,6 +13,8 @@ from auth.api import get_current_user
 from auth.security import create_access_token
 from auth.store import authenticate_user
 from alerts.alert_manager import get_alert_dashboard_snapshot, get_recent_alerts, load_alert_store
+from alerts.email_alert import get_email_diagnostics
+from alerts.sms_alert import get_sms_diagnostics
 from model.model_lifecycle import (
     get_current_model_status,
     list_model_versions,
@@ -92,6 +94,17 @@ class ModelRetrainRequest(BaseModel):
 @app.get("/health")
 def healthcheck():
     return {"status": "ok"}
+
+
+@app.get("/notifications/diagnostics")
+def get_notification_diagnostics(current_user: dict = Depends(get_current_user)):
+    return {
+        "user": current_user,
+        "result": {
+            "email": get_email_diagnostics(),
+            "sms": get_sms_diagnostics(),
+        },
+    }
 
 
 @app.get("/model/status")
